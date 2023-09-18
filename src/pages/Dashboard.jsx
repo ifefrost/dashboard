@@ -7,7 +7,7 @@ import InfoLine from "../components/InfoLine";
 
 const Dashboard = () => {
   return (
-    <div className='block h-full w-full mt-5'>
+    <div className='container h-full w-full mt-5'>
       <div className='flex flex-col'>
         <div className='flex justify-between'>
           <div className='flex flex-col'>

@@ -38,7 +38,7 @@ export const technical = [
 
 const Sidebar = () => {
   return (
-    <div className='flex-col flex my-auto'>
+    <div className='flex-col flex mt-10 sticky'>
       <div className='flex'>
         <div className='flex flex-col w-64 h-[80vh] gap-5 px-4 justify-between'>
           <div className='flex flex-col gap-5 px-4 justify-evenly'>
