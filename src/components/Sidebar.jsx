@@ -9,7 +9,7 @@ import {
 export const categories = [
   {
     name: "Dashboard",
-    icon: <MdOutlineDashboard className='w-6 h-6 text-lime-600' />,
+    icon: <MdOutlineDashboard className='md:w-6 md:h-6 text-lime-600' />,
     link: "/",
     active: true,
   },
@@ -18,19 +18,19 @@ export const categories = [
 export const technical = [
   {
     name: "Help",
-    icon: <MdOutlineHelpOutline className='w-6 h-6' />,
+    icon: <MdOutlineHelpOutline className='md:w-6 md:h-6' />,
     link: "/help",
     active: false,
   },
   {
     name: "Policies & Compliance",
-    icon: <MdMenuBook className='w-6 h-6' />,
+    icon: <MdMenuBook className='md:w-6 md:h-6' />,
     link: "/policies",
     active: false,
   },
   {
     name: "Settings",
-    icon: <MdOutlineSettings className='w-6 h-6' />,
+    icon: <MdOutlineSettings className='md:w-6 md:h-6' />,
     link: "/settings",
     active: false,
   },
@@ -38,32 +38,33 @@ export const technical = [
 
 const Sidebar = () => {
   return (
-    <div className='flex-col flex mt-10 sticky'>
+    <div className='flex-col flex mt-5 h-full sticky top-16'>
       <div className='flex'>
-        <div className='flex flex-col w-64 h-[80vh] gap-5 px-4 justify-between'>
-          <div className='flex flex-col gap-5 px-4 justify-evenly'>
-            {categories.map((category) => (
-              <Link
-                className='flex items-center'
-                key={category.name}
-                to={category.link}
-              >
-                {category.icon}
-                <span className=' text-gray-400 ml-2'>{category.name}</span>
-              </Link>
-            ))}
-          </div>
-          <div className='flex flex-col gap-5 px-4 justify-evenly border-t-2 border-gray-700'>
-            {technical.map((category) => (
-              <Link
-                className='flex items-center py-2'
-                key={category.name}
-                to={category.link}
-              >
-                {category.icon}
-                <span className=' text-gray-400 ml-2'>{category.name}</span>
-              </Link>
-            ))}
+        <div className='duration-300 flex flex-col lg:w-64 w-16 h-[80vh] gap-5 px-4 justify-between'>
+          {categories.map((category) => (
+            <Link
+              className='flex items-center'
+              key={category.name}
+              to={category.link}
+            >
+              {category.icon}
+              <span className=' text-gray-400 ml-2 hidden lg:block'>
+                {category.name}
+              </span>
+            </Link>
+          ))}
+          <div className='flex flex-col gap-5 justify-evenly'>
+          <hr className='border border-gray-700' />
+          {technical.map((category) => (
+            <Link
+              className='flex items-center'
+              key={category.name}
+              to={category.link}
+            >
+              {category.icon}
+              <span className=' text-gray-400 ml-2 hidden lg:block'>{category.name}</span>
+            </Link>
+          ))}
           </div>
         </div>
       </div>

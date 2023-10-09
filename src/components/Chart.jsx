@@ -9,8 +9,8 @@ const Chart = () => {
       .toString()}`;
   };
   return (
-    <Card className='col-span-3 row-span-3'>
-      <div className='flex justify-between'>
+    <Card className='col-span-3 row-span-3 -z-10'>
+      <div className='flex flex-col md:flex-inline justify-between'>
         <p className='text-xl font-bold'>Statistics</p>
         <TabGroup className='w-max'>
           <TabList variant='solid'>

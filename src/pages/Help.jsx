@@ -7,10 +7,10 @@ import {
 
 const Help = () => {
   return (
-    <div className='mx-auto container'>
+    <div className='mx-auto container pe-4 lg:pe-0'>
       <div>
         <p className='text-lg text-lime-600 uppercase font-semibold'>FAQ</p>
-        <h1 className='text-5xl font-bold leading-loose'>
+        <h1 className='lg:text-5xl text-2xl font-bold lg:leading-loose'>
           We&apos;re here to help
         </h1>
         <p className='text-lg'>

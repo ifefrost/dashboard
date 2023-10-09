@@ -4,15 +4,16 @@ import logo from "../assets/react.svg";
 
 const Nav = () => {
   return (
-    <nav className='mt-0 z-10'>
+    <nav className='sticky top-0 z-20 bg-white'>
       <div className='mx-auto 2xl:max-w-screen-xl px-2 sm:px-6 lg:px-8'>
-        <div className='relative  flex h-16 items-center justify-between'>
-          <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-            <div className='flex-shrink-0 flex items-center'>
-              <Link to={'/'} className='text-2xl no-underline hover:text-lime-600 font-sans font-bold'>
-                My Dashboard
-              </Link>
-            </div>
+        <div className='relative flex h-16 items-center justify-between'>
+          <div className='flex-1 flex items-center justify-center lg:items-stretch lg:justify-start'>
+            <Link
+              to={"/"}
+              className='text-2xl no-underline hover:text-lime-600 font-sans font-bold'
+            >
+              My Dashboard
+            </Link>
           </div>
           <div className='flex gap-3'>
             <button className='flex items-center justify-center bg-gray-100 focus:shadow-outline border border-gray-200 rounded-full h-8 w-8'>
